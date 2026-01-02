@@ -1,6 +1,8 @@
 package com.module3.module3.repository;
 
 import com.module3.module3.entity.ProductEntity;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -38,5 +40,28 @@ public interface ProductRepository extends JpaRepository<ProductEntity,Long> {
 //   @Query("select e from ProductEntity e where e.title=:title and e.price=:price")
     @Query("select e from ProductEntity e where e.title=?1 and e.price=?2")
     Optional<ProductEntity> findByTitleAndPrice(String title, BigDecimal price);
+
+
+    //Sorting using auto methods : but tightly coupled to the name so have to declare separate methods for each one of them.
+    List<ProductEntity> findByTitleOrderByPrice(String title);
+
+    List<ProductEntity> findByOrderByPrice();
+
+
+    //Using Sort object
+
+    List<ProductEntity> findBy(Sort sort);
+
+
+    //Pagination
+    //Main Interface -> Pageable
+    //Concrete impl of that is PageRequest
+    //Which gives a Page object -> a subset of whole dataset.
+
+    List<ProductEntity> findByTitleContaining(String title, Pageable pageable);
+
+
+
+
 
 }
