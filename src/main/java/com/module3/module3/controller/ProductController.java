@@ -17,7 +17,6 @@ import java.util.List;
 public class ProductController {
 
     private final ProductRepository productRepository;
-    private final int PAGE_SIZE = 5;
 
     public ProductController(ProductRepository productRepository) {
         this.productRepository = productRepository;
@@ -30,6 +29,7 @@ public class ProductController {
             @RequestParam(defaultValue = "0") Integer pageNumber
             ) {
 
+        int PAGE_SIZE = 5;
         return productRepository.findByTitleContaining(
                 title,
                 PageRequest.of(

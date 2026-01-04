@@ -1,26 +1,43 @@
-INSERT INTO test.products(price, quantity, sku, name)
+--INSERT INTO test.products(price, quantity, sku, name)
+--VALUES
+--(12.4, 4, 'parle734', 'Parle Biscuit'),
+--(14.4, 1, 'pepsi123', 'Pepsi'),
+--(34.4, 10, 'Coke124', 'Coca Cola'),
+--(16.4, 3, 'pepsi156', 'Mazza'),
+--(10.5, 6, 'oreo321', 'Oreo Biscuit'),
+--(25.0, 2, 'lays789', 'Lays Chips'),
+--(13.7, 8, 'kitkat456', 'KitKat'),
+--(29.9, 5, 'sprite111', 'Sprite'),
+--(19.4, 7, 'fanta222', 'Fanta'),
+--(22.5, 9, 'twix333', 'Twix'),
+--(30.0, 4, 'bournvita444', 'Bournvita'),
+--(27.3, 2, 'milo555', 'Milo'),
+--(15.6, 3, 'maggi666', 'Maggi Noodles'),
+--(17.8, 1, 'pasta777', 'Pasta'),
+--(11.3, 2, 'parle738', 'Parle G Biscuit'),
+--(15.6, 4, 'pepsi127', 'Diet Pepsi'),
+--(36.5, 7, 'Coke127', 'Coca Cola Zero'),
+--(18.2, 1, 'pepsi128', 'Pepsi Max'),
+--(14.7, 3, 'parle739', 'Parle Marie Biscuit'),
+--(16.9, 5, 'pepsi129', 'Pepsi Twist'),
+--(37.8, 9, 'Coke128', 'Coca Cola Vanilla'),
+--(19.5, 6, 'pepsi130', 'Pepsi Blue'),
+--(15.3, 8, 'parle740', 'Parle 20-20 Cookies'),
+--(17.1, 2, 'pepsi131', 'Pepsi Wild Cherry');
+
+
+INSERT INTO patient (name, gender, birth_date, email, blood_group)
 VALUES
-(12.4, 4, 'parle734', 'Parle Biscuit'),
-(14.4, 1, 'pepsi123', 'Pepsi'),
-(34.4, 10, 'Coke124', 'Coca Cola'),
-(16.4, 3, 'pepsi156', 'Mazza'),
-(10.5, 6, 'oreo321', 'Oreo Biscuit'),
-(25.0, 2, 'lays789', 'Lays Chips'),
-(13.7, 8, 'kitkat456', 'KitKat'),
-(29.9, 5, 'sprite111', 'Sprite'),
-(19.4, 7, 'fanta222', 'Fanta'),
-(22.5, 9, 'twix333', 'Twix'),
-(30.0, 4, 'bournvita444', 'Bournvita'),
-(27.3, 2, 'milo555', 'Milo'),
-(15.6, 3, 'maggi666', 'Maggi Noodles'),
-(17.8, 1, 'pasta777', 'Pasta'),
-(11.3, 2, 'parle738', 'Parle G Biscuit'),
-(15.6, 4, 'pepsi127', 'Diet Pepsi'),
-(36.5, 7, 'Coke127', 'Coca Cola Zero'),
-(18.2, 1, 'pepsi128', 'Pepsi Max'),
-(14.7, 3, 'parle739', 'Parle Marie Biscuit'),
-(16.9, 5, 'pepsi129', 'Pepsi Twist'),
-(37.8, 9, 'Coke128', 'Coca Cola Vanilla'),
-(19.5, 6, 'pepsi130', 'Pepsi Blue'),
-(15.3, 8, 'parle740', 'Parle 20-20 Cookies'),
-(17.1, 2, 'pepsi131', 'Pepsi Wild Cherry');
+    ('Aarav Sharma', 'MALE', '1990-05-10', 'aarav.sharma@example.com', 'O_POSITIVE'),
+    ('Diya Patel', 'FEMALE', '1995-08-20', 'diya.patel@example.com', 'A_POSITIVE'),
+    ('Dishant Verma', 'MALE', '1988-03-15', 'dishant.verma@example.com', 'A_POSITIVE'),
+    ('Neha Iyer', 'FEMALE', '1992-12-01', 'neha.iyer@example.com', 'AB_POSITIVE'),
+    ('Kabir Singh', 'MALE', '1993-07-11', 'kabir.singh@example.com', 'O_POSITIVE');
+
+
+--
+--INSERT INTO doctor (name, specialization, email)
+--VALUES
+--    ('Dr. Rakesh Mehta', 'Cardiology', 'rakesh.mehta@example.com'),
+--    ('Dr. Sneha Kapoor', 'Dermatology', 'sneha.kapoor@example.com'),
+--    ('Dr. Arjun Nair', 'Orthopedics', 'arjun.nair@example.com');
