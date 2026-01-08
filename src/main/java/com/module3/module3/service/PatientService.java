@@ -56,4 +56,14 @@ public class PatientService {
          */
         patient1.setName("Vivek");
     }
+
+    @Transactional
+    public void deletePatient(Long patientId) {
+        Patient patient = patientRepository.findById(patientId).orElseThrow();
+        patientRepository.deleteById(patientId); //Till this it will delete the patient but not the insurance associated with it.
+        //For that we have to set the removal strategy. i.e cascading.all
+
+        //Now if the patient is deleted the insurance associated with it also gets deleted.
+
+    }
 }
