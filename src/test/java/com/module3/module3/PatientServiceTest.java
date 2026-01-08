@@ -40,7 +40,15 @@ public class PatientServiceTest {
 //        patientRepository.save(patient); //Persistent State -> when repository.save method is called it will call the persist/merge method of entity manager.
 
 
-        patientService.testPatientTransaction();
+//        patientService.testPatientTransaction();
+
+
+
+        List<Patient> patients = patientRepository.getAllPatientsWithAppointment();
+
+        for(var patient : patients) {
+            System.out.println(patient);
+        }
     }
 
 }
